@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Shop.Domain.Core\Shop.Domain.Core.csproj" />
+    <ProjectReference Include="..\..\Services\Shop.Services.Dto\Shop.Services.Dto.csproj" />
+    <ProjectReference Include="..\..\Services\Shop.Services.Interfaces\Shop.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Shop.Infrastructure.Data\Shop.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
+</Project>

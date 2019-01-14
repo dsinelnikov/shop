@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <AspNetCoreModuleHistingModel>inprocess</AspNetCoreModuleHistingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Shop.Infrastructure.Business\Shop.Infrastructure.Business.csproj" />
+    <ProjectReference Include="..\Infrastructure\Shop.Infrastructure.Data\Shop.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\Services\Shop.Services.Dto\Shop.Services.Dto.csproj" />
+    <ProjectReference Include="..\Services\Shop.Services.Interfaces\Shop.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
