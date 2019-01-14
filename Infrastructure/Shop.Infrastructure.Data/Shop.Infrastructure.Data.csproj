@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190105092748_AddOrders.cs" />
+    <Compile Remove="Migrations\20190105095946_PersonDataIsNotRequired.cs" />
+    <Compile Remove="Migrations\20190106072806_UseEnumForRoleId.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Shop.Domain.Core\Shop.Domain.Core.csproj" />
+  </ItemGroup>
+
+</Project>
